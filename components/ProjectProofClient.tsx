@@ -6,19 +6,30 @@ import { fetchProjectBySlug } from '@/lib/supabase/data';
 import { Project } from '@/lib/types';
 
 function imageUrl(publicId: string) {
-  const cloud = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME;
+  const cloud =
+    process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME;
 
   if (!cloud) return '';
 
-  return `https://res.cloudinary.com/${cloud}/image/upload/f_auto,q_auto,w_1200/${publicId}`;
+  return `https://res.cloudinary.com/${cloud}/image/upload/c_scale,w_1200/q_auto/f_auto/${publicId}`;
 }
 
 function videoUrl(publicId: string) {
-  const cloud = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME;
+  const cloud =
+    process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME;
 
   if (!cloud) return '';
 
-  return `https://res.cloudinary.com/${cloud}/video/upload/f_auto:video,q_auto,w_1400/${publicId}`;
+  return `https://res.cloudinary.com/${cloud}/video/upload/c_scale,w_1400/q_auto/f_auto:video/${publicId}`;
+}
+
+function videoPosterUrl(publicId: string) {
+  const cloud =
+    process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME;
+
+  if (!cloud) return '';
+
+  return `https://res.cloudinary.com/${cloud}/video/upload/so_0/c_scale,w_1400/q_auto/${publicId}.jpg`;
 }
 
 export default function ProjectProofClient({
@@ -145,6 +156,7 @@ export default function ProjectProofClient({
           {video ? (
             <video
               src={videoUrl(video.publicId)}
+              poster={videoPosterUrl(video.publicId)}
               controls
               playsInline
               preload="metadata"
