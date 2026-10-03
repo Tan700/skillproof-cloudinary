@@ -1,5 +1,20 @@
 SkillProof — Visual Proof-of-Work Portfolios
 
+
+Final Submission Links
+
+Replace these placeholders before submitting:
+
+Live demo:  https://skillproof-cloudinary.vercel.app/
+GitHub:     https://github.com/Tan700/skillproof-cloudinary
+
+Project Status
+
+Hackathon MVP — Code Freeze Candidate
+
+The current prototype focuses on a reliable, demonstrable media workflow rather than a large feature set. The architecture is deliberately simple enough for a small team to operate and structured so the product can expand without replacing the core media layer.
+
+
 Don't just tell recruiters what you can do. Show them.
 
 SkillProof is a media-first portfolio platform for students and early-career builders. Instead of relying on a text-only resume, users create project pages backed by real evidence: demo videos, screenshots, certificates, diagrams, and links.
@@ -470,16 +485,4 @@ README is updated with final links and instructions.
 
 Cloudinary feedback survey is completed at cld.media/hackathon-survey.
 
-Final Submission Links
 
-Replace these placeholders before submitting:
-
-Live demo:  <YOUR_VERCEL_URL>
-GitHub:     <YOUR_PUBLIC_GITHUB_REPOSITORY_URL>
-Demo video: <YOUR_DEMO_VIDEO_URL>
-
-Project Status
-
-Hackathon MVP — Code Freeze Candidate
-
-The current prototype focuses on a reliable, demonstrable media workflow rather than a large feature set. The architecture is deliberately simple enough for a small team to operate and structured so the product can expand without replacing the core media layer.
